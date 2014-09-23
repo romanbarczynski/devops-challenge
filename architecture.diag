@@ -1,0 +1,13 @@
+seqdiag {
+  AnyService [style = dashed];
+  MicroCounter [label = "MicroCounter\nHTTP:8080"];
+  Redis [label = "Redis\n:6379"];
+
+  AnyService -> MicroCounter [label = "GET /counter"];
+  MicroCounter => Redis [label = "GET counter", return = "current value"];
+  AnyService <- MicroCounter [label = "current value"];
+
+  AnyService -> MicroCounter [label = "POST /counter, incrBy=number"];
+  MicroCounter => Redis [label = "INCRBY counter number", return = "current value"];
+  AnyService <- MicroCounter [label = "current value"];
+}
