@@ -1,4 +1,6 @@
 seqdiag {
+  span_width = 80;
+
   AnyService [style = dashed];
   MicroCounter [label = "MicroCounter\nHTTP:8080"];
   Redis [label = "Redis\n:6379"];
