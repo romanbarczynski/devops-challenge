@@ -9,7 +9,7 @@ Perfect task for You - our DevOps. Let's do a PoC using `Redis`!
 
 After discussion we came up with the following interface of our `MicroCounter`:
 
-![MicroCounter architecture](architecture.svg)
+![MicroCounter architecture](architecture.png)
 
 There are two HTTP endpoints:
 
