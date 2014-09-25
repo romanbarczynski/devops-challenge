@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*- vim: set ts=4 sw=4 et :
-
 from flask import Flask, request
 import redis
 app = Flask(__name__)
