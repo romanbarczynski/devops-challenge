@@ -7,7 +7,19 @@ start_venv() {
     venv/bin/pip install -r requirements.txt
 }
 
+get_redis() {
+	mkdir -p redis
+	cd redis
+	test -f redis-2.8.17.tar.gz || wget http://download.redis.io/releases/redis-2.8.17.tar.gz
+	tar xzf redis-2.8.17.tar.gz
+	cd redis-2.8.17
+	make
+	cp src/redis-server ../
+	cd ../../
+}
+
 test -d ./venv/ || start_venv
+test -x redis/redis-server || get_redis
 
 venv/bin/circusd circus.ini --daemon
 

@@ -3,3 +3,4 @@ venv
 dump.rdb
 *.pyc
 __pycache__
+redis/
