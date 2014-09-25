@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo "Not implemented"
-exit 1
+venv/bin/circusctl quit
+
+#rm -rf venv
+#rm dump.rdb
